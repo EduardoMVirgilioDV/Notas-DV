@@ -1,0 +1,107 @@
+/*
+En CSS los estilos se aplican sobre el elemento al que el selector apunta.
+La gracia es cuando hay dos reglas de estilo diferentes cambiando el mismo
+estilo a un elemento.
+
+Por ejemplo, que dos reglas de estilo diferentes quieran cambiar el color
+de fondo del elemento.
+
+En los casos de conflicto, se resuelven a través de dos mecanismos 
+llamados "jerarquía/especificicada" y "cascada".
+
+Primero desempata la jerarquía, si no alcanza, la cascada.
+
+La jerarquía en CSS se mide a través de qué tan específico es un 
+selector.
+
+Cada selector tiene un puntaje, el puntaje más alto, gana.
+
+#id                 1000
+
+.clase,
+[atributo],
+:pseudo-clases       100
+
+elementos,
+::pseudo-elementos    10
+
+*                      1
+
+
+La cosa se complica un touch más con los selectores compuestos.
+Por ejemplo los descendentes:
+ul li a
+.nav li a
+
+Cómo sabemos cual queda en esos casos?
+Se suman los puntos.
+ul li a
+     30
+
+.nav li a
+    120
+
+
+En los casos donde la jerarquía no alcance para desempatar, se aplica
+la cascada.
+La cascada dice que "el que esté más abajo, gana".
+*/
+
+/*p {
+    color: red;
+    font-size: 2em;
+    font-style: italic;
+}
+
+.un-p {
+    color: blue;
+    font-size: 1.5em;
+}
+
+#p {
+    color: green;
+}*/
+
+/*.mi-footer {*/
+/* Copiamos el selector de jQM: */
+/*.ui-page-theme-a .ui-bar-inherit {*/
+/* Lo editamos para usar nuestra clase: */
+.ui-page-theme-a .mi-footer {
+/*    background-color: red;*/
+    text-align: center;
+}
+
+
+/* Transición para el cambio de los botones. */
+.ui-page-theme-a .ui-btn,
+html .ui-bar-a .ui-btn,
+html .ui-body-a .ui-btn,
+html body .ui-group-theme-a .ui-btn,
+html head + body .ui-btn.ui-btn-a {
+    transition: all .5s;
+}
+
+
+.fila-form {
+    margin-bottom: 1.5rem;
+}
+
+/* Clases para alertas y notificaciones */
+.notificacion-exito {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #cfc;
+    color: #252;
+}
+
+.nota {
+    padding: 0 1rem;
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    border: 1px solid #999;
+    background-color: #fefefe;
+}
+
+
+
