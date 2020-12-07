@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer app :D</title>
+    
+    <!-- Incluimos el CSS -->
+    <!-- De momento agregamos el CSS completo de jQM, después lo
+    vamos a tunear un poco más. -->
+<!--    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">-->
+    <!-- El CSS anterior lo usamos cuando queríamos trabajar con los
+    estilos nativos del framework.
+    Cuando tenemos nuestro theme personalizado, ese CSS ya no sirve.
+    Sino, que vamos a incluir 3 CSS ahora:
+    1. El CSS del Theme
+    2. El CSS de los íconos del Theme
+    3. El CSS de la estructura de jQM -->
+    <link rel="stylesheet" href="css/midv.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+    <!-- Agregamos los estilos de los plugins. -->
+    <link rel="stylesheet" href="css/jquery-confirm.min.css">
+    <!-- Ahora agregamos nuestro CSS. Importante que venga después del 
+    CSS de jQM. -->
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <!-- Agregamos los JS -->
+    <!-- Acá es *muy* importante el orden.
+        Siempre el orden es:
+        1. jQuery.
+        2. jQuery Mobile.
+        2.5. Otros plugins.
+        3. Los scripts de ustedes (salvo algunas excepciones).
+      -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script src="js/jquery-confirm.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!--
+    Índice:
+    
+    [1]. Home
+    [2]. Carreras
+    [2.1]. Analista de Sistemas
+    [2.2]. Cine de Animación
+    [2.3]. Diseño Gráfico
+    [2.4]. Diseño Multimedial
+    [2.5]. Diseño de Videojuegos
+    [2.6]. Diseño Web
+    [3]. Mis Notas
+    [3.1]. Form Nueva Nota
+    -->
+   
+    <!-- [1]. Home -->
+    <section data-role="page" id="home">
+        <header data-role="header">
+            <h1>Mi DV</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Bienvenidos/as a Escuela Da Vinci</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta suscipit, nemo labore eum tempore nisi assumenda nihil consectetur veritatis itaque. Officia eum cumque ex nam quasi assumenda labore, provident magnam.</p>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!-- [2]. Carreras -->
+    <section data-role="page" id="carreras">
+        <header data-role="header">
+            <h1>Carreras</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Lista de Carreras</h2>
+            <p>Mirá las carreras que tenemos para ofrecerte, y elegí la que mejor se ajuste a tu perfil.</p>
+            
+            <!-- Armamos una lista utilizando el Widget: Listview -->
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#c-analista">Analista de Sistemas</a></li>
+                <li><a href="#c-cine">Cine de Animación</a></li>
+                <li><a href="#c-grafico">Diseño Gráfico</a></li>
+                <li><a href="#c-mm">Diseño Multimedial</a></li>
+                <li><a href="#c-vj">Diseño Video Juegos</a></li>
+                <li><a href="#c-web">Diseño Web</a></li>
+            </ul>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!-- [2.1]. Analista de Sistemas -->
+    <section data-role="page" id="c-analista">
+<!--        <header data-role="header" data-add-back-btn="true">-->
+        <header data-role="header">
+            <!-- En vez de utilizar el data-add-back-btn="true" en el 
+            header, podemos agregar el botón a mano. -->
+            <a href="#home" data-rel="back">Volver</a>
+            <h1>Analista de Sistemas</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Descripción de la carrera</h2>
+            <p>Creá los mejores sistemas lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nostrum quo, dolorem, consectetur mollitia sunt exercitationem debitis velit. Voluptates vel, obcaecati beatae! Sequi neque, recusandae est, debitis modi quasi corporis?.</p>
+            
+            <h2>Listado de Materias por cuatrimestre</h2>
+            
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!-- [2.2]. Cine de Animación -->
+    <section data-role="page" id="c-cine">
+        <header data-role="header" data-add-back-btn="true">
+            <h1>Cine de Animación</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Descripción de la carrera</h2>
+            <p>Creá los mejores sistemas lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nostrum quo, dolorem, consectetur mollitia sunt exercitationem debitis velit. Voluptates vel, obcaecati beatae! Sequi neque, recusandae est, debitis modi quasi corporis?.</p>
+            
+            <h2>Listado de Materias por cuatrimestre</h2>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!--[2.3]. Diseño Gráfico -->
+    <section data-role="page" id="c-grafico">
+        <header data-role="header" data-add-back-btn="true">
+            <h1>Diseño Gráfico</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Descripción de la carrera</h2>
+            <p>Creá los mejores sistemas lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nostrum quo, dolorem, consectetur mollitia sunt exercitationem debitis velit. Voluptates vel, obcaecati beatae! Sequi neque, recusandae est, debitis modi quasi corporis?.</p>
+            
+            <h2>Listado de Materias por cuatrimestre</h2>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!-- [2.4]. Diseño Multimedial -->
+    <section data-role="page" id="c-mm">
+        <header data-role="header" data-add-back-btn="true">
+            <h1>Diseño Multimedial</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Descripción de la carrera</h2>
+            <p>Creá los mejores sistemas lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nostrum quo, dolorem, consectetur mollitia sunt exercitationem debitis velit. Voluptates vel, obcaecati beatae! Sequi neque, recusandae est, debitis modi quasi corporis?.</p>
+            
+            <h2>Listado de Materias por cuatrimestre</h2>
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Buscar por materia...">
+                <li data-role="list-divider">1er Cuatrimestre</li>
+                <li>Diseño Gráfico Publicitario I</li>
+                <li>Ilustración Digital</li>
+                <li>Lógica de la Programación</li>
+                <li>Psicología de la Comunicación</li>
+                <li>Representación Gráfica I</li>
+                <li>Tratamiento Digital de la Imagen</li>
+                
+                <li data-role="list-divider">2do Cuatrimestre</li>
+                <li>Diseño Gráfico Publicitario II</li>
+                <li>Programación Visual I</li>
+                <li>Representación Gráfica II</li>
+                <li>Semiología de la Imagen</li>
+                
+                <li data-role="list-divider">3er Cuatrimestre</li>
+                <li>Programación Visual II</li>
+            </ul>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!-- [2.5]. Diseño de Videojuegos -->
+    <section data-role="page" id="c-vj">
+        <header data-role="header" data-add-back-btn="true">
+            <h1>Diseño de Videojuegos</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Descripción de la carrera</h2>
+            <p>Creá los mejores sistemas lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nostrum quo, dolorem, consectetur mollitia sunt exercitationem debitis velit. Voluptates vel, obcaecati beatae! Sequi neque, recusandae est, debitis modi quasi corporis?.</p>
+            
+            <h2>Listado de Materias por cuatrimestre</h2>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!-- [2.6]. Diseño Web -->
+    <section data-role="page" id="c-web">
+        <header data-role="header" data-add-back-btn="true">
+            <h1>Diseño Web</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Descripción de la carrera</h2>
+            <p>Creá los mejores sistemas lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nostrum quo, dolorem, consectetur mollitia sunt exercitationem debitis velit. Voluptates vel, obcaecati beatae! Sequi neque, recusandae est, debitis modi quasi corporis?.</p>
+            
+            <h2>Listado de Materias por cuatrimestre</h2>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!-- [3]. Mis Notas -->
+    <section data-role="page" id="notas">
+        <header data-role="header">
+            <h1>Mis Notas</h1>
+            <a href="#nueva-nota" class="ui-btn-right">Nueva</a>
+        </header>
+        <div class="ui-content" role="main">
+            <h2>Últimas notas</h2>
+            
+            <!-- Div para mostrar alertas y notificaciones. -->
+            <div id="status"></div>
+            
+            <p>Cargá las notas de tus materias para llevar un historial de tu progreso.</p>
+            
+<!--            <button id="lista-notas-ordenar">Order por notas de mayor a menor</button>-->
+            
+            <!-- Acá adentro vamos a ir guardando todas las notas -->
+            <section id="lista-notas">
+            </section>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+    
+    <!-- [3.1]. Form Nueva Nota -->
+    <section data-role="page" id="nueva-nota">
+        <header data-role="header">
+            <a href="#notas">Volver</a>
+            <h1>Nueva Nota</h1>
+        </header>
+        <div class="ui-content" role="main">
+            <p>Completá los datos del formulario para agendar la nueva nota.</p>
+            
+            <form action="" id="form-nueva-nota">
+                <div class="fila-form">
+                    <label for="carrera">Carrera</label>
+                    <select name="carrera" id="carrera">
+                        <option value="Analista de Sistemas">Analista de Sistemas</option>
+                        <option value="Cine de Animación">Cine de Animación</option>
+                        <option value="Desarrollo de Videojuegos">Desarrollo de Videojuegos</option>
+                        <option value="Diseño Gráfico">Diseño Gráfico</option>
+                        <option value="Diseño Multimedial">Diseño Multimedial</option>
+                        <option value="Diseño Web">Diseño Web</option>
+                    </select>
+                </div>
+                <div class="fila-form">
+                    <label for="materia">Materia</label>
+                    <select name="materia" id="materia">
+                        <option value="1">Lógica de Programación</option>
+                        <option value="2">Programación Visual I</option>
+                        <option value="3">Programación Visual II</option>
+                        <option value="4">Programación Visual III</option>
+                        <option value="5">Desarrollo de Apps</option>
+                    </select>
+                </div>
+                <div class="fila-form">
+                    <label for="instancia">Instancia de Evaluación</label>
+                    <select name="instancia" id="instancia">
+                        <option value="1">1er TP</option>
+                        <option value="2">2do TP</option>
+                        <option value="3">3er TP</option>
+                        <option value="4">Recup. 1er TP</option>
+                        <option value="5">Recup. 2do TP</option>
+                        <option value="6">Recup. 3er TP</option>
+                        <option value="7">Final</option>
+                    </select>
+                </div>
+                <div class="fila-form">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha">
+                </div>
+                <div class="fila-form">
+                    <label for="nota">Nota</label>
+                    <input type="number" id="nota" step="1" min="1" max="10">
+                </div>
+                <div class="fila-form">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios"></textarea>
+                </div>
+                <button>Agregar
+                </button>
+            </form>
+        </div>
+        <footer data-role="footer" class="mi-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#carreras">Carreras</a></li>
+                    <li><a href="#notas">Mis Notas</a></li>
+                </ul>
+            </div>
+            <p>Da Vinci &copy; 2019</p>
+        </footer>
+    </section>
+</body>
+</html>

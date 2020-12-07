@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+La etiqueta xml funciona como el equivalente al DOCTYPE, declara
+el tipo de documento.
+-->
+<!--
+widget es el elemento raíz de este documento.
+Es equivalente al <html>.
+Por defecto, van a ver que le ponemos 4 atributos:
+xmlns y xmlns:gap => Son atributos de definición del formato del
+    documento. Son siempre los mismos valores.
+id => El "id" de la app, con formato de URL invertida. Debe ser 
+    único en el dispositivo donde se lo instale, ya que esto se
+    usa para identificar la app, poder actualizarla, etc.
+version => El número de versión con el formato de SEMVER 
+    (Semantic Versioning): major.minor.patch
+-->
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "ar.edu.davinci.apps2019c2"
+    version     = "0.0.1" >
+
+    <!-- Indica el nombre de la app. Esto se usa tanto en las 
+    tiendas, como en el dispositivo bajo el ícono y demás. -->
+    <name>Mi DV</name>
+
+    <!-- Indica una descripción de la aplicación. Se usa en las
+    tiendas.
+    En la entrega, acá pueden poner una descripción del trabajo
+    o de lo que se trata. -->
+    <description>
+      Mi DV es una app para almacenar y mantener toda tu info de tu
+      carrera en DV.
+    </description>
+
+    <!-- Los datos del autor de la app. Ya sea una persona, una
+    empresa, o la entidad que corresponda. -->
+    <author href="https://davinci.edu.ar" email="no-existo@davinci.edu.ar">
+      Da Vinci
+    </author>
+    
+    <!-- La etiqueta "preference" permite indicar ciertas 
+    configuraciones para nuestra app.
+    Algunas son generales, otras son específicas de alguna 
+    plataforma. -->
+    <!--
+    Esta preferencia indica que nuestra app, por defecto, no 
+    requiere de ningún permiso especial, o que no queremos 
+    agregarle ninguno extra. Esto excluye el permiso de acceso
+    a internet, que es requisito de PhoneGap Build.
+    
+    Cabe destacar que dependiendo de las funcionalidades que
+    pidan después, pueden agregarse permisos al margen de lo que
+    dice esta preferencia.
+    -->
+    <preference name="permissions"                value="none"/>
+
+    <!-- Personaliza si quieren forzar la orientación del 
+    dispositivo para su app.
+    Valores: 
+    * default => Permite portrait y landscape.
+    * landscape
+    * portrait -->
+    <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+    
+    <!-- Plugins: Permite agregarle funcionalidades a la app, como
+    acceso a los diferentes sensores o funcionalidades del 
+    dispositivo (cámara, contactos, geolocation, etc).
+    Dos cosas a mencionar:
+    1. Dependiendo el plugin que agreguen, puede sumarle permisos
+        extras a la app.
+    2. Para saber más detalles sobre cada plugin, pueden revisar
+        https://cordova.apache.org/plugins -->
+
+    <!-- Core plugins -->
+    <!--<plugin name="cordova-plugin-battery-status" />
+    <plugin name="cordova-plugin-camera" />
+    <plugin name="cordova-plugin-media-capture" />
+    <plugin name="cordova-plugin-console" />
+    <plugin name="cordova-plugin-contacts" />
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-device-motion" />
+    <plugin name="cordova-plugin-device-orientation" />
+    <plugin name="cordova-plugin-dialogs" />
+    <plugin name="cordova-plugin-file" />
+    <plugin name="cordova-plugin-file-transfer" />
+    <plugin name="cordova-plugin-geolocation" />
+    <plugin name="cordova-plugin-globalization" />
+    <plugin name="cordova-plugin-inappbrowser" />
+    <plugin name="cordova-plugin-media" />
+    <plugin name="cordova-plugin-network-information" />-->
+    <plugin name="cordova-plugin-splashscreen" />
+
+    <!-- <icon> permite definir los íconos de la app.
+   https://cordova.apache.org/docs/en/latest/config_ref/images.html 
+    -->
+    <icon src="icon.png" />
+    
+    <!-- Splashscreen:
+    https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/index.html
+    "splashscreen" es como se llama a la pantalla de carga de la
+    app.
+    -->
+    <splash src="ruta/al/splash.png" />
+</widget>
